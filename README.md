@@ -1,8 +1,8 @@
 ## Laravel JWT Scaffolding
 
-Laravel (7.0+) with JWT out of the box. Just install and start to code your API.
+Laravel (7.x) with JWT out of the box. Just install and start to code your API.
 
-After cloning this repo, just enter:
+After cloning this repo and its dependencies via composer, just enter:
 
 ```
 php artisan key:generate
@@ -25,6 +25,19 @@ Now you ready to go!
 |GET       | api/me       | AuthController@me       | api,auth:api |
 |POST      | api/refresh  | AuthController@refresh  | api,auth:api |
 |POST      | api/register | AuthController@register | api          |
+
+# Protect a Route
+
+You just have to set the middleware to **auth:api**
+
+# Tests
+
+```
+php artisan test
+```
+
+
+
 
 
 

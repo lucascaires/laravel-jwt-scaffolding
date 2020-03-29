@@ -3,10 +3,9 @@
       "lucascaires/laravel-jwt-scaffolding": {
           "dev-master": { 
               "name": "lucascaires/laravel-jwt-scaffolding",
-              "version": "0.0.1",
               "dist": {
-                  "url": "https://github.com/lucascaires/laravel-jwt-scaffolding.git",
-                  "type": "git"
+                  "url": "https://github.com/lucascaires/laravel-jwt-scaffolding",
+                  "type": "vcs"
               }            
           }
       }

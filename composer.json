@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "lucascaires/laravel-jwt-scaffolding",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "The Laravel Framework w/ JWT out of the box",
     "keywords": [
         "framework",
         "laravel"

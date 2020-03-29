@@ -7,7 +7,7 @@ Laravel (7.x) with JWT out of the box. Just install and start to code your API.
 First clone this repo
 
 ```
-git clone https://github.com/lucascaires/laravel-jwt-scaffolding.git
+git clone https://github.com/lucascaires/laravel-jwt-scaffolding.git your-project-name
 ```
 
 *Remember to remove .git folder to setup your own git config*
@@ -16,7 +16,7 @@ git clone https://github.com/lucascaires/laravel-jwt-scaffolding.git
 Then enter into the cloned folder and install its dependencies
 
 ```
-cd laravel-jwt-scafoolding
+cd your-project-name
 composer install 
 ```
 

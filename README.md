@@ -10,6 +10,9 @@ First clone this repo
 git clone https://github.com/lucascaires/laravel-jwt-scaffolding.git
 ```
 
+*Remember to remove .git folder to setup your own git config*
+
+
 Then enter into the cloned folder and install its dependencies
 
 ```

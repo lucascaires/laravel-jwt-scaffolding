@@ -17,7 +17,12 @@ cd laravel-jwt-scafoolding
 composer install 
 ```
 
-Setup your .env file and generate the keys
+Setup your .env file
+```
+mv .env.example .env
+```
+
+Generate the keys
 
 ```
 php artisan key:generate

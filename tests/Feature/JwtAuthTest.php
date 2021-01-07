@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use App\User;
+use App\Models\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -24,20 +24,41 @@ class JwtAuthTest extends TestCase
             'email' => 'example@example.com',
             'password' => 'example',
             'password_confirmation' => 'example'
-        ]);        
+        ]);   
+
+
+
         $response->assertJsonStructure([
             'access_token', 'token_type', 'expires_in'
         ]);
         $response->assertStatus(200);
     }
 
-    public function testUsersCanLoggedIn()
+    public function testIfNotRegisteredUserCanLogIn()
     {
-        $user = factory(User::class)->create();
+        $user = User::factory()->make();
+        
         $response = $this->json('POST', 'api/login', [
             'email' => $user->email,
             'password' => 'password'
-        ]);        
+        ]);   
+
+        $response->assertJsonStructure([
+            'error'
+        ]);
+
+        $response->assertStatus(401); //Unauthorized
+    }
+
+    public function testUsersCanLoggedIn()
+    {
+        $user = User::factory()->create();
+        
+        $response = $this->json('POST', 'api/login', [
+            'email' => $user->email,
+            'password' => 'password'
+        ]);   
+
         $response->assertJsonStructure([
             'access_token', 'token_type', 'expires_in'
         ]);

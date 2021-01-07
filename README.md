@@ -1,6 +1,6 @@
 ## Laravel JWT Scaffolding
 
-Laravel (7.x) with JWT out of the box. Just install and start to code your API.
+Laravel (8.x) with JWT out of the box. Just install and start to code your API.
 
 ## Get Started
 

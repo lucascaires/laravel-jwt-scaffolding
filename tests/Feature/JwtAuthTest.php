@@ -2,8 +2,6 @@
 
 use App\Models\User;
 
-uses(\Illuminate\Foundation\Testing\RefreshDatabase::class);
-
 test('if a guest will not see a protected route')
     ->get('api/me')
     ->assertStatus(401);
@@ -28,7 +26,7 @@ test('if a not registered user cannot loggin')
 
 test('if a user can login', function () {
     $user = User::factory()->create();
-    $this->json('POST', 'api/login', [
+    test()->post('api/login', [
         'email' => $user->email,
         'password' => 'password'
     ])->assertJsonStructure([
